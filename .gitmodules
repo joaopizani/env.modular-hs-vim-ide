@@ -1,3 +1,6 @@
 [submodule "general-vim-cfgs"]
 	path = general-vim-cfgs
 	url = https://github.com/joaopizani/modular-xplatform-vim-cfg
+[submodule "haskell-vim-cfgs"]
+	path = haskell-vim-cfgs
+	url = https://github.com/joaopizani/haskell-vim-cfgs.git
