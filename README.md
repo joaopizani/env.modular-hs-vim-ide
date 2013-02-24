@@ -37,7 +37,7 @@ purely functional and (almost) free of side effects, just like Haskell :)
 
 Remeber, this is only about how to install the environment. If you want to know all the goodies
 that it offers and how to use them, you should read
-  * The [Vim-General README](https://github.com/joaopizani/modular-xplatform-vim-cfg/README.md)
+  * The [Vim-General README](http://github.com/joaopizani/modular-xplatform-vim-cfg/blob/master/README.md)
   * The [Vim-Haskell README](http://github.com/joaopizani/haskell-vim-cfgs/blob/master/README.md)
 
 Now for the "installation":
@@ -47,10 +47,10 @@ Now for the "installation":
 #### First step - Clone and update submodules ####
   * Clone this repo to a directory of your preference (referred here as $REPO),
     and then init and update the submodules recursively:
-```bash
-REPO=~/modular-hs-vim-ide;  git clone https://github.com/joaopizani/modular-hs-vim-ide.git $REPO
-cd $REPO;  git submodule update --init --recursive
-```
+
+    REPO=~/modular-hs-vim-ide; git clone https://github.com/joaopizani/modular-hs-vim-ide.git $REPO
+    cd $REPO; git submodule update --init --recursive
+
 
 #### Second step - Link (OS-specific) ####
   * **Linux, BSD or Mac OS X:** Create a link called "\_vimrc" in your home
@@ -64,10 +64,7 @@ ln -s ${REPO}/_vimrc  ~/_vimrc
 
 #### Third and last step - initialize the plugins ####
   * Fetch and install (in a self-contained fashion, of course) all the plugins
-    of the recommended set, by using:
-```bash
-vim -u ~/_vimrc +BundleInstall +qall
-```
+    of the recommended set, by using: `vim -u ~/_vimrc +BundleInstall +qall`
 
 **DONE**, completely DONE. Now, you have two choices, depending on whether you already had a
 ".vimrc" file in your home directory.
@@ -80,7 +77,7 @@ vim -u ~/_vimrc +BundleInstall +qall
     `mv ~/.vimrc ~/_vimrc-old`. Then vim will start using the Haskell IDE's "_vimrc" file
     whenever you run `vim`.
 
-  * An easy way to have both version of Vim (Haskell-tuned and oldschool) together is to
+  * An easy way to have both versions of Vim (Haskell-tuned and old-school) together is to
     create an alias for the Haskell version, for example:
     `echo "alias hvim='vim -u ~/_vimrc'" >> ~/.bash_aliases` to have the nice "hvim" alias.
 
