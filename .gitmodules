@@ -1,0 +1,3 @@
+[submodule "general-vim-cfgs"]
+	path = general-vim-cfgs
+	url = https://github.com/joaopizani/modular-xplatform-vim-cfg
