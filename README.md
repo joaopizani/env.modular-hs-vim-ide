@@ -48,13 +48,16 @@ Now for the "installation":
   * Clone this repo to a directory of your preference (referred here as $REPO),
     and then init and update the submodules recursively:
 
-    REPO=~/modular-hs-vim-ide; git clone https://github.com/joaopizani/modular-hs-vim-ide.git $REPO
-    cd $REPO; git submodule update --init --recursive
+```bash
+REPO=~/modular-hs-vim-ide; git clone https://github.com/joaopizani/modular-hs-vim-ide.git $REPO
+cd $REPO; git submodule update --init --recursive
+```
 
 
 #### Second step - Link (OS-specific) ####
   * **Linux, BSD or Mac OS X:** Create a link called "\_vimrc" in your home
     directory pointing to the cloned repo:
+
 ```bash
 ln -s ${REPO}/_vimrc  ~/_vimrc
 ```
