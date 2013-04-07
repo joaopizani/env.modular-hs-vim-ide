@@ -63,7 +63,7 @@ cd $REPO; git submodule update --init --recursive
 ln -s $REPO/_vimrc  ~/_vimrc
 ```
 
-  * **Windows:** execute (double-click) the file named `$REPO/install-vimrc-link.bat`
+  * **Windows:** execute (double-click) the file named `$REPO/win/install-vimrc-link.bat`
 
 #### Third and last step - initialize the plugins ####
   * Fetch and install (in a self-contained fashion, of course) all the plugins
