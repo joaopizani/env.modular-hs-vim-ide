@@ -24,9 +24,10 @@ develop Haskell software using Vim. These two component projects are:
     [README](http://github.com/joaopizani/haskell-vim-cfgs/blob/master/README.md) file.
     In summary:
     - Unicode symbols shown dynamically with Vim's conceal feature (λ, ∷, →, ⇒, »=, », ∘)
-    - One-keypress syntax and type-checking using GHC-mod
+    - One-keypress syntax-checking, type-checking and type-insertion using GHC-mod
     - Source file outline (tags) using lushtags
     - Haskell syntax-specific code folding showing type signatures
+    - Haskell code beautification through Jasper van der Jeugt's AWESOME _stylish-haskell_
 
 
 How to install
@@ -35,7 +36,7 @@ It'so easy that it doesn't even deserve the awful name "installation". As a matt
 setup relies very little on stateful stuff, so I like to regard this "installation" as being
 purely functional and (almost) free of side effects, just like Haskell :)
 
-Remeber, this is only about how to install the environment. If you want to know all the goodies
+Remember, this is only about how to install the environment. If you want to know all the goodies
 that it offers and how to use them, you should read
   * The [Vim-General README](http://github.com/joaopizani/modular-xplatform-vim-cfg/blob/master/README.md)
   * The [Vim-Haskell README](http://github.com/joaopizani/haskell-vim-cfgs/blob/master/README.md)
@@ -59,11 +60,10 @@ cd $REPO; git submodule update --init --recursive
     directory pointing to the cloned repo:
 
 ```bash
-ln -s ${REPO}/_vimrc  ~/_vimrc
+ln -s $REPO/_vimrc  ~/_vimrc
 ```
 
-  * **Windows:** Go into `$REPO/win` and execute (double-click) the file
-    named `install-vimrc-link.bat`
+  * **Windows:** execute (double-click) the file named `$REPO/install-vimrc-link.bat`
 
 #### Third and last step - initialize the plugins ####
   * Fetch and install (in a self-contained fashion, of course) all the plugins
@@ -72,8 +72,8 @@ ln -s ${REPO}/_vimrc  ~/_vimrc
 **DONE**, completely DONE. Now, you have two choices, depending on whether you already had a
 ".vimrc" file in your home directory.
   * If you already have, don't worry: by typing `vim` your trusty, old configuration (~/.vimrc)
-    will be used. As the file pointing to the Haskell IDE configs is in "_vimrc", you
-    have to type `vim -u ~/_vimrc` to use it.
+    will be used. Because the file pointing to the Haskell IDE configs is in "_vimrc", you
+    will have to type `vim -u ~/_vimrc` to use then Haskell environment.
 
   * If you want to make the Haskell IDE config a _default_ and use your old Vim config only
     sometimes, OR if you _had no significant vim customization at all_, you can just do
